@@ -23,7 +23,7 @@ import android.view.Menu;
 
 public class home1 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    DrawerLayout drawer ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +38,7 @@ public class home1 extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+      drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -46,7 +46,7 @@ public class home1 extends AppCompatActivity
         toggle.syncState();
         if(savedInstanceState==null)
         {
-            getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.home);
             navigationView.setNavigationItemSelectedListener(this);
         }
@@ -89,23 +89,23 @@ public class home1 extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
+
         switch(item.getItemId())
         {
             case R.id.home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment()).commit();
+               getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
                 break;
             case R.id.alumini:
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new AluminiFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AluminiFragment()).commit();
                 break;
             case R.id.Companies:
-                getSupportFragmentManager().beginTransaction().replace(R.id.container,new CompanFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CompanFragment()).commit();
                 break;
             case R.id.placement:
-                getSupportFragmentManager().beginTransaction().replace(R.id.container,new PlacementFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new PlacementFragment()).commit();
                 break;
         }
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

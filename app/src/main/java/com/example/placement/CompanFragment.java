@@ -13,6 +13,6 @@ public class CompanFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_company,container);
+        return inflater.inflate(R.layout.fragment_company,container,false);
     }
 }
