@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/home"
+            android:icon="@drawable/ic_home"
+            android:title="Home"
+            tools:ignore="DuplicateIds" />
+        <item android:id="@+id/alumini"
+            android:icon="@drawable/ic_profile"
+            android:title="Alumini Details"/>
+
+        <item android:id="@+id/Companies"
+            android:icon="@drawable/ic_company"
+            android:title="Company"/>
+
+        <item android:id="@+id/placement"
+            android:icon="@drawable/ic_placement"
+            android:title="Placement Details"/>
+
+    </group>
+    <item android:title="New Data">
+        <menu>
+            <item android:id="@+id/addstud"
+                android:icon="@drawable/ic_stud"
+                android:title="Add Students"/>
+            <item android:id="@+id/committee"
+                android:icon="@drawable/ic_committee"
+                android:title="Add Committee"/>
+            <item android:id="@+id/update"
+                android:icon="@drawable/ic_update"
+                android:title="Add Update"/>
+
+        </menu>
+    </item>
+
+</menu>
