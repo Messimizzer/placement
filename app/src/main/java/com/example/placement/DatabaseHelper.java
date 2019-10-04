@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(Context context) {
-        super(context, "placement.db", null, 1);
+            super(context, "placement.db", null, 1);
     }
 
     @Override
@@ -34,7 +34,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("phone", phone);
         long ins=database.insert("userregi",null, contentValues);
         if(ins==-1)return false;
-        else return  true;
+        else
+                return  true;
     }
     //checking if email exists;
     public Boolean chkemai(String email)
@@ -44,4 +45,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if(cursor.getCount()>0) return false;
         else return true;
     }
+
+
 }
