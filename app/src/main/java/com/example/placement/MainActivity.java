@@ -49,14 +49,16 @@ public class MainActivity extends AppCompatActivity {
                             if(insert==true)
                             {
                                 Toast.makeText(getApplicationContext(), "Registered Successfully",Toast.LENGTH_SHORT).show();
+                          db.close();
                             }
+
                         }
                         else
                         {
                             Toast.makeText(getApplicationContext(), "Email already exists!!", Toast.LENGTH_SHORT).show();
                         }
                     }
-                    Toast.makeText(getApplicationContext(),"Password do no match!", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
