@@ -14,7 +14,7 @@ public class DatabasesHelperPlacement extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+    public void onCreate(SQLiteDatabase sqLiteDatabase ) {
 sqLiteDatabase.execSQL("Create table placementdetails(name text, rollno text primary key, marks10 text, marks12 text, graduation text, pgraduation text )");
     }
 

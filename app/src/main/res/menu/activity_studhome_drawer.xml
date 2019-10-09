@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home1"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home"
+            tools:ignore="DuplicateIds" />
+        <item
+            android:id="@+id/newupdate"
+            android:icon="@drawable/ic_update"
+            android:title="New Updates" />
+        <item
+            android:id="@+id/seeupdate"
+            android:icon="@drawable/ic_update"
+            android:title="See New Updates" />
+        <item
+            android:id="@+id/namelist"
+            android:icon="@drawable/ic_personadd"
+            android:title="Add to Name list" />
+    </group>
+
+    <item android:title="New Data">
+        <menu>
+            <item
+                android:id="@+id/adddetails"
+                android:icon="@drawable/ic_person"
+                android:title="Add Details" />
+            <item
+                android:id="@+id/addcerti"
+                android:icon="@drawable/ic_check"
+                android:title="Add Certification" />
+            <item
+                android:id="@+id/docdatabase"
+                android:icon="@drawable/ic_check"
+                android:title="Add Docs to Database" />
+        </menu>
+    </item>
+
+</menu>
