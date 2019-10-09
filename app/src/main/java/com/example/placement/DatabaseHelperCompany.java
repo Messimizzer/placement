@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelperCompany extends SQLiteOpenHelper {
-    public DatabaseHelperCompany(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public DatabaseHelperCompany(Context context) {
         super(context,"placement.db", null, 1);
     }
 
@@ -31,8 +31,12 @@ sqLiteDatabase.execSQL("drop table if exists companydetails");
        long ins=database.insert("companydetails", null, contentValues);
         if(ins==-1)
             return  false;
-        else
+
+        else {
+            database.close();
             return true;
+
+        }
     }
     public boolean chkecompname(String compname)
     {

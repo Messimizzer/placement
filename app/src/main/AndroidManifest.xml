@@ -9,9 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".NewFragment"></activity>
         <activity
             android:name=".studhome"
             android:label="@string/title_activity_studhome"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".home1"
+            android:label="@string/title_activity_home1"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,14 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".home1"
-            android:label="@string/title_activity_home1"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".home" />
+        <activity android:name=".MainActivity" >
 
         </activity>
-        <activity android:name=".home" />
-        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

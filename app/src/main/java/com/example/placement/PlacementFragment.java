@@ -25,6 +25,7 @@ public class PlacementFragment extends Fragment {
 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
+       db=new DatabasesHelperPlacement(this.getActivity());
         name = (EditText) getView().findViewById(R.id.name);
         rollno = (EditText) getView().findViewById(R.id.rollno);
         marks10 = (EditText) getView().findViewById(R.id.marks10);
@@ -46,9 +47,9 @@ public class PlacementFragment extends Fragment {
                     Toast.makeText(getContext(), "Fields Are Empty!", Toast.LENGTH_SHORT).show();
                 } else {
                     if (s1.equals(s1)) {
-                        Boolean chkeroll = db.chkerol(s2);
+                        boolean chkeroll = db.chkerol(s2);
                         if (chkeroll == true) {
-                            Boolean insert = db.insert(s1, s2, s3, s4, s5, s6);
+                            boolean insert = db.insert(s1, s2, s3, s4, s5, s6);
                             if (insert == true)
                             {
                                 Toast.makeText(getContext(), "Added Successfully", Toast.LENGTH_SHORT).show();
